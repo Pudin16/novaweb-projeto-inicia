@@ -1,0 +1,2 @@
+36f36a1 docs: insere secao de requisitos no README
+4f12b53 docs: adiciona documentacao inicial do projeto e notas de estudo
