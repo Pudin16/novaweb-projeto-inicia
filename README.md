@@ -1,18 +1,19 @@
-Projeto NovaWeb Studio
-
-
-
-Repositório inicial estruturado durante o treinamento de versionamento.
-
-
-
-\## Requisitos do Sistema
-
-
-
-\- Git instalado
-
-\- Windows 10 ou superior
-
-\- Editor de texto
-
+blog-games/
+│
+├── index.html
+│
+├── pages/
+│   ├── posts.html
+│   └── contato.html
+│
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   │
+│   └── images/
+│       ├── logo.png
+│       ├── banner.jpg
+│       ├── jogos/
+│       └── icones/
+│
+└── README.md

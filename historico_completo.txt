@@ -4,8 +4,8 @@ Date:   Thu Jul 30 12:20:54 2026 -0300
 
     docs: insere secao de requisitos no README
 
-commit 4f12b534cca9146d009102fdcfe44a1e2600a614
+commit 04f12b534cca9146d009102fdcfe44a1e2600a614
 Author: pudindeleite16@gmail.com <fernando.santos3@portalsesisp.org.br>
-Date:   Thu Jul 30 12:17:27 2026 -0300
+Date:   Thu Jul 30 12:17:27 2026 -030
 
     docs: adiciona documentacao inicial do projeto e notas de estudo
