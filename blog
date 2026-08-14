@@ -1,0 +1,20 @@
+📁 novaweb-projeto-inicial
+│
+├── 📁 assets
+│   ├── 📁 icons
+│   │   └── arquivos de ícones
+│   │
+│   └── 📁 images
+│       └── imagens selecionadas
+│
+├── 📁 css
+│   └── style.css
+│
+├── 📁 js
+│   └── script.js
+│
+├── 📁 pages
+│
+├── 📄 Guia_de_Estilo_Inicial.md
+├── 📄 index.html
+└── 📄 README.md
