@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -5,24 +6,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fernando José Silva Santos | Sobre Mim</title>
+    <title>Fernando José | Portfólio</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilo03.css">
 </head>
 
 <body>
 
-    <!-- Cabeçalho -->
+    <!-- CABEÇALHO -->
     <header class="cabecalho">
 
         <div class="logo">
-            <span>FJ</span>
-            <h1>Fernando José</h1>
+            <div class="logo-caixa">FJ</div>
+
+            <div>
+                <h1>Fernando José</h1>
+                <p>Estudante • Tecnologia • Robótica</p>
+            </div>
         </div>
 
         <nav>
             <ul>
-                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#sobre">Sobre mim</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
@@ -32,17 +37,20 @@
     </header>
 
 
-    <!-- Conteúdo principal -->
+    <!-- CONTEÚDO PRINCIPAL -->
     <main>
 
-        <!-- Seção Sobre Mim -->
-        <section id="sobre" class="sobre">
+        <!-- SOBRE MIM -->
+        <section id="sobre" class="hero">
 
-            <div class="sobre-texto">
+            <div class="hero-texto">
 
-                <span class="etiqueta">SOBRE MIM</span>
+                <span class="tag">SOBRE MIM</span>
 
-                <h2>Olá! Eu sou o Fernando.</h2>
+                <h2>
+                    Olá, eu sou
+                    <span>Fernando.</span>
+                </h2>
 
                 <p>
                     Sou estudante e tenho interesse por tecnologia,
@@ -51,45 +59,72 @@
                 </p>
 
                 <p>
-                    Atualmente, também desenvolvo projetos envolvendo
-                    programação e robótica, buscando sempre melhorar minhas
-                    habilidades e aprender novas formas de resolver problemas.
+                    Durante meus estudos, procuro desenvolver minhas
+                    habilidades em programação e tecnologia, sempre buscando
+                    novas formas de resolver problemas.
                 </p>
 
-                <a class="botao" href="#contato">
-                    Entre em contato
-                </a>
+                <div class="botoes">
+
+                    <a href="#projetos" class="botao">
+                        Ver meus projetos
+                    </a>
+
+                    <a href="#contato" class="botao botao-secundario">
+                        Entre em contato
+                    </a>
+
+                </div>
 
             </div>
 
-            <div class="foto-container">
-                <img
-                    src="perfil.jpg"
-                    alt="Foto de perfil de Fernando José Silva Santos"
-                >
+
+            <div class="foto-area">
+
+                <div class="foto-borda">
+
+                    <img
+                        src="perfil.jpg"
+                        alt="Foto de perfil de Fernando José Silva Santos"
+                    >
+
+                </div>
+
             </div>
 
         </section>
 
 
-        <!-- Habilidades e Hobbies -->
+        <!-- HABILIDADES E HOBBIES -->
         <section id="habilidades" class="secao">
 
-            <div class="titulo-secao">
-                <span class="etiqueta">MEUS INTERESSES</span>
+            <div class="titulo">
+
+                <span class="tag">MEUS INTERESSES</span>
+
                 <h2>Habilidades e Hobbies</h2>
+
                 <p>
-                    Algumas das áreas que fazem parte dos meus estudos
-                    e interesses.
+                    Algumas áreas que fazem parte dos meus estudos,
+                    projetos e momentos de lazer.
                 </p>
+
             </div>
 
 
-            <div class="colunas">
+            <div class="cards">
 
-                <div class="card">
+                <!-- HABILIDADES -->
+                <article class="card">
+
+                    <div class="icone">01</div>
 
                     <h3>Habilidades</h3>
+
+                    <p>
+                        Conhecimentos e áreas que venho desenvolvendo
+                        durante meus estudos.
+                    </p>
 
                     <ul>
                         <li>Programação</li>
@@ -98,12 +133,19 @@
                         <li>Desenvolvimento de projetos</li>
                     </ul>
 
-                </div>
+                </article>
 
 
-                <div class="card">
+                <!-- HOBBIES -->
+                <article class="card">
+
+                    <div class="icone">02</div>
 
                     <h3>Hobbies</h3>
+
+                    <p>
+                        Atividades que gosto de fazer no meu tempo livre.
+                    </p>
 
                     <ul>
                         <li>Robótica</li>
@@ -112,24 +154,27 @@
                         <li>Jogos</li>
                     </ul>
 
-                </div>
+                </article>
 
             </div>
 
         </section>
 
 
-        <!-- Projetos -->
+        <!-- PROJETOS -->
         <section id="projetos" class="secao">
 
-            <div class="titulo-secao">
-                <span class="etiqueta">MEUS PROJETOS</span>
+            <div class="titulo">
+
+                <span class="tag">PROJETOS</span>
 
                 <h2>Projetos e Experiências</h2>
 
                 <p>
-                    Alguns exemplos de atividades e projetos realizados.
+                    Alguns projetos e atividades desenvolvidos durante
+                    meus estudos.
                 </p>
+
             </div>
 
 
@@ -138,36 +183,49 @@
                 <table>
 
                     <thead>
+
                         <tr>
                             <th>Projeto</th>
                             <th>Área</th>
                             <th>Descrição</th>
                         </tr>
+
                     </thead>
 
                     <tbody>
 
                         <tr>
                             <td>Projeto de Robótica</td>
+
                             <td>Robótica</td>
+
                             <td>
-                                Desenvolvimento e programação de robôs.
+                                Desenvolvimento e programação
+                                de robôs.
                             </td>
                         </tr>
+
 
                         <tr>
                             <td>Projeto Web</td>
+
                             <td>Programação</td>
+
                             <td>
-                                Criação de páginas utilizando HTML e CSS.
+                                Criação de páginas utilizando
+                                HTML e CSS.
                             </td>
                         </tr>
 
+
                         <tr>
                             <td>Projetos Escolares</td>
+
                             <td>Tecnologia</td>
+
                             <td>
-                                Desenvolvimento de projetos para atividades escolares.
+                                Desenvolvimento de projetos
+                                para atividades escolares.
                             </td>
                         </tr>
 
@@ -180,17 +238,18 @@
         </section>
 
 
-        <!-- Contato -->
+        <!-- CONTATO -->
         <section id="contato" class="secao contato">
 
-            <div class="titulo-secao">
+            <div class="titulo">
 
-                <span class="etiqueta">CONTATO</span>
+                <span class="tag">CONTATO</span>
 
-                <h2>Entre em contato</h2>
+                <h2>Vamos conversar?</h2>
 
                 <p>
-                    Preencha o formulário abaixo para enviar uma mensagem.
+                    Preencha o formulário abaixo para enviar
+                    uma mensagem.
                 </p>
 
             </div>
@@ -198,36 +257,40 @@
 
             <form>
 
-                <div class="campo">
+                <div class="linha-formulario">
 
-                    <label for="nome">
-                        Nome
-                    </label>
+                    <div class="campo">
 
-                    <input
-                        type="text"
-                        id="nome"
-                        name="nome"
-                        placeholder="Digite seu nome"
-                        required
-                    >
+                        <label for="nome">
+                            Nome
+                        </label>
 
-                </div>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome"
+                            required
+                        >
+
+                    </div>
 
 
-                <div class="campo">
+                    <div class="campo">
 
-                    <label for="email">
-                        E-mail
-                    </label>
+                        <label for="email">
+                            E-mail
+                        </label>
 
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Digite seu e-mail"
-                        required
-                    >
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            required
+                        >
+
+                    </div>
 
                 </div>
 
@@ -241,8 +304,8 @@
                     <textarea
                         id="mensagem"
                         name="mensagem"
-                        rows="6"
                         placeholder="Digite sua mensagem"
+                        rows="6"
                         required
                     ></textarea>
 
@@ -260,47 +323,63 @@
     </main>
 
 
-    <!-- Rodapé -->
+    <!-- RODAPÉ -->
     <footer>
 
-        <div>
+        <div class="rodape-conteudo">
 
-            <h2>Fernando José</h2>
+            <div>
+
+                <h2>Fernando José</h2>
+
+                <p>
+                    Tecnologia, programação e robótica.
+                </p>
+
+            </div>
+
+
+            <div class="redes">
+
+                <h3>Redes sociais</h3>
+
+                <div class="links-redes">
+
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Instagram
+                    </a>
+
+                    <a
+                        href="https://www.youtube.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        YouTube
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
 
             <p>
-                Estudante • Tecnologia • Programação • Robótica
+                © 2026 Fernando José Silva Santos.
+                Todos os direitos reservados.
             </p>
 
         </div>
-
-
-        <div class="redes">
-
-            <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Instagram
-            </a>
-
-            <a
-                href="https://www.youtube.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                YouTube
-            </a>
-
-        </div>
-
-
-        <p class="copyright">
-            © 2026 Fernando José Silva Santos. Todos os direitos reservados.
-        </p>
 
     </footer>
 
 </body>
 
 </html>
+```

@@ -1,6 +1,7 @@
-/* =========================
+
+/* ========================================
    CONFIGURAÇÕES GERAIS
-========================= */
+======================================== */
 
 * {
     margin: 0;
@@ -20,16 +21,15 @@ body {
 }
 
 
-/* =========================
+/* ========================================
    CABEÇALHO
-========================= */
+======================================== */
 
 .cabecalho {
     width: 100%;
-    padding: 20px 8%;
+    padding: 20px 7%;
 
     background-color: #111827;
-
     border-bottom: 1px solid #334155;
 
     display: flex;
@@ -38,7 +38,7 @@ body {
 
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
 }
 
 .logo {
@@ -47,46 +47,55 @@ body {
     gap: 12px;
 }
 
-.logo span {
-    width: 42px;
-    height: 42px;
+.logo-caixa {
+    width: 45px;
+    height: 45px;
 
     background-color: #8b5cf6;
-    color: white;
+    color: #ffffff;
 
-    border-radius: 10px;
+    border-radius: 12px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
+    font-size: 16px;
     font-weight: bold;
 }
 
 .logo h1 {
-    font-size: 20px;
     color: #f8fafc;
+    font-size: 19px;
+}
+
+.logo p {
+    color: #94a3b8;
+    font-size: 12px;
 }
 
 
-/* =========================
-   MENU
-========================= */
+/* ========================================
+   NAVEGAÇÃO
+======================================== */
 
 nav ul {
     list-style: none;
 
     display: flex;
+    align-items: center;
+
     gap: 28px;
 }
 
 nav a {
     color: #cbd5e1;
+
     text-decoration: none;
 
-    font-size: 15px;
+    font-size: 14px;
 
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -94,9 +103,9 @@ nav a:hover {
 }
 
 
-/* =========================
-   MAIN
-========================= */
+/* ========================================
+   ÁREA PRINCIPAL
+======================================== */
 
 main {
     width: 90%;
@@ -106,16 +115,17 @@ main {
 }
 
 
-/* =========================
-   SEÇÃO SOBRE
-========================= */
+/* ========================================
+   HERO / SOBRE MIM
+======================================== */
 
-.sobre {
-    min-height: 600px;
+.hero {
+    min-height: 650px;
 
     padding: 90px 0;
 
     display: grid;
+
     grid-template-columns: 1.2fr 0.8fr;
 
     gap: 70px;
@@ -123,84 +133,70 @@ main {
     align-items: center;
 }
 
-.sobre-texto {
+.hero-texto {
     padding: 20px;
 }
 
-.etiqueta {
+.tag {
     display: inline-block;
+
+    margin-bottom: 15px;
 
     color: #a78bfa;
 
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
 
     letter-spacing: 2px;
-
-    margin-bottom: 15px;
 }
 
-.sobre h2 {
+.hero h2 {
+    margin-bottom: 25px;
+
     color: #f8fafc;
 
-    font-size: 48px;
+    font-size: 52px;
 
     line-height: 1.1;
-
-    margin-bottom: 25px;
 }
 
-.sobre p {
+.hero h2 span {
+    color: #8b5cf6;
+}
+
+.hero p {
+    max-width: 650px;
+
+    margin-bottom: 16px;
+
     color: #94a3b8;
 
-    font-size: 17px;
-
-    margin-bottom: 18px;
-
-    max-width: 650px;
+    font-size: 16px;
 }
 
 
-/* =========================
-   FOTO
-========================= */
+/* ========================================
+   BOTÕES
+======================================== */
 
-.foto-container {
-    padding: 15px;
+.botoes {
+    display: flex;
 
-    border: 1px solid #334155;
+    gap: 15px;
 
-    border-radius: 24px;
-
-    background-color: #1e293b;
-
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    margin-top: 28px;
 }
-
-.foto-container img {
-    display: block;
-
-    width: 100%;
-    height: 400px;
-
-    object-fit: cover;
-
-    border-radius: 16px;
-}
-
-
-/* =========================
-   BOTÃO
-========================= */
 
 .botao {
     display: inline-block;
 
-    margin-top: 15px;
-    padding: 13px 22px;
+    padding: 13px 20px;
 
     background-color: #8b5cf6;
-    color: white;
+
+    color: #ffffff;
+
+    border: 1px solid #8b5cf6;
 
     border-radius: 8px;
 
@@ -208,7 +204,9 @@ main {
 
     font-weight: bold;
 
-    transition: 0.3s;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
 }
 
 .botao:hover {
@@ -217,13 +215,65 @@ main {
     transform: translateY(-2px);
 }
 
+.botao-secundario {
+    background-color: transparent;
 
-/* =========================
+    border-color: #475569;
+
+    color: #cbd5e1;
+}
+
+.botao-secundario:hover {
+    background-color: #1e293b;
+
+    border-color: #8b5cf6;
+}
+
+
+/* ========================================
+   FOTO
+======================================== */
+
+.foto-area {
+    padding: 15px;
+
+    background-color: #1e293b;
+
+    border: 1px solid #334155;
+
+    border-radius: 24px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.foto-borda {
+    overflow: hidden;
+
+    border-radius: 16px;
+}
+
+.foto-borda img {
+    display: block;
+
+    width: 100%;
+    height: 420px;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.foto-borda img:hover {
+    transform: scale(1.03);
+}
+
+
+/* ========================================
    SEÇÕES
-========================= */
+======================================== */
 
 .secao {
-    margin: 40px auto;
+    margin: 45px auto;
 
     padding: 55px;
 
@@ -236,28 +286,32 @@ main {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
-.titulo-secao {
+.titulo {
     margin-bottom: 35px;
 }
 
-.titulo-secao h2 {
+.titulo h2 {
+    margin-bottom: 10px;
+
     color: #f8fafc;
 
     font-size: 32px;
-
-    margin-bottom: 10px;
 }
 
-.titulo-secao p {
+.titulo p {
+    max-width: 700px;
+
     color: #94a3b8;
+
+    font-size: 15px;
 }
 
 
-/* =========================
+/* ========================================
    CARDS
-========================= */
+======================================== */
 
-.colunas {
+.cards {
     display: grid;
 
     grid-template-columns: 1fr 1fr;
@@ -272,9 +326,11 @@ main {
 
     border: 1px solid #334155;
 
-    border-radius: 14px;
+    border-radius: 16px;
 
-    transition: 0.3s;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .card:hover {
@@ -283,37 +339,64 @@ main {
     border-color: #8b5cf6;
 }
 
+.icone {
+    width: 45px;
+    height: 45px;
+
+    margin-bottom: 20px;
+
+    background-color: #312e81;
+
+    color: #c4b5fd;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
 .card h3 {
+    margin-bottom: 10px;
+
     color: #f8fafc;
 
     font-size: 21px;
+}
 
-    margin-bottom: 18px;
+.card p {
+    margin-bottom: 20px;
+
+    color: #94a3b8;
+
+    font-size: 14px;
 }
 
 .card ul {
     padding-left: 20px;
 
-    color: #94a3b8;
+    color: #cbd5e1;
 }
 
 .card li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 
-/* =========================
+/* ========================================
    TABELA
-========================= */
+======================================== */
 
 .tabela-container {
     width: 100%;
 
     overflow-x: auto;
 
-    border-radius: 12px;
-
     border: 1px solid #334155;
+
+    border-radius: 12px;
 }
 
 table {
@@ -338,7 +421,7 @@ th {
 
     color: #a78bfa;
 
-    font-size: 14px;
+    font-size: 13px;
 }
 
 td {
@@ -347,32 +430,49 @@ td {
     font-size: 14px;
 }
 
-tr:last-child td {
+tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: #172033;
+}
+
+tbody tr:last-child td {
     border-bottom: none;
 }
 
 
-/* =========================
+/* ========================================
    FORMULÁRIO
-========================= */
+======================================== */
 
 .contato form {
-    max-width: 750px;
+    max-width: 800px;
 
     margin: 0 auto;
 }
 
+.linha-formulario {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
 .campo {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 .campo label {
     display: block;
 
-    color: #f8fafc;
-
     margin-bottom: 8px;
 
+    color: #f8fafc;
+
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -392,9 +492,12 @@ tr:last-child td {
 
     outline: none;
 
-    font-family: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
 
-    transition: 0.3s;
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .campo input:focus,
@@ -405,27 +508,30 @@ tr:last-child td {
 }
 
 .campo textarea {
+    min-height: 140px;
+
     resize: vertical;
 }
 
 .contato button {
-    padding: 14px 25px;
+    padding: 13px 22px;
 
     background-color: #8b5cf6;
 
-    color: white;
+    color: #ffffff;
 
-    border: none;
+    border: 1px solid #8b5cf6;
 
     border-radius: 8px;
 
-    font-size: 15px;
-
+    font-size: 14px;
     font-weight: bold;
 
     cursor: pointer;
 
-    transition: 0.3s;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
 }
 
 .contato button:hover {
@@ -435,76 +541,97 @@ tr:last-child td {
 }
 
 
-/* =========================
+/* ========================================
    RODAPÉ
-========================= */
+======================================== */
 
 footer {
     margin-top: 80px;
 
-    padding: 45px 8%;
+    padding: 45px 7%;
 
     background-color: #111827;
 
     border-top: 1px solid #334155;
+}
+
+.rodape-conteudo {
+    max-width: 1100px;
+
+    margin: 0 auto;
 
     display: grid;
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 25px;
+    gap: 30px;
 }
 
 footer h2 {
+    margin-bottom: 8px;
+
     color: #f8fafc;
 
-    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+
+    color: #f8fafc;
+
+    font-size: 15px;
 }
 
 footer p {
     color: #94a3b8;
+
+    font-size: 14px;
 }
 
 .redes {
+    text-align: right;
+}
+
+.links-redes {
     display: flex;
 
     justify-content: flex-end;
 
-    align-items: center;
-
-    gap: 25px;
+    gap: 20px;
 }
 
-.redes a {
+.links-redes a {
     color: #a78bfa;
 
     text-decoration: none;
 
+    font-size: 14px;
     font-weight: bold;
 }
 
-.redes a:hover {
+.links-redes a:hover {
     text-decoration: underline;
 }
 
 .copyright {
-    grid-column: 1 / -1;
+    max-width: 1100px;
 
-    text-align: center;
+    margin: 30px auto 0;
 
     padding-top: 20px;
 
     border-top: 1px solid #334155;
 
-    font-size: 13px;
+    text-align: center;
 }
 
 
-/* =========================
+/* ========================================
    RESPONSIVIDADE
-========================= */
+======================================== */
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
 
     .cabecalho {
         flex-direction: column;
@@ -513,40 +640,84 @@ footer p {
     }
 
     nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
         gap: 15px;
     }
 
-    .sobre {
+    .hero {
         grid-template-columns: 1fr;
 
         padding: 60px 0;
 
-        gap: 30px;
+        gap: 35px;
     }
 
-    .sobre h2 {
-        font-size: 36px;
+    .hero h2 {
+        font-size: 40px;
     }
 
-    .foto-container img {
-        height: 350px;
-    }
-
-    .colunas {
+    .cards {
         grid-template-columns: 1fr;
     }
 
-    .secao {
-        padding: 30px 20px;
+    .linha-formulario {
+        grid-template-columns: 1fr;
     }
 
-    footer {
+    .rodape-conteudo {
         grid-template-columns: 1fr;
 
         text-align: center;
     }
 
     .redes {
+        text-align: center;
+    }
+
+    .links-redes {
         justify-content: center;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    main {
+        width: 94%;
+    }
+
+    .cabecalho {
+        padding: 18px 4%;
+    }
+
+    .logo h1 {
+        font-size: 17px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+
+    .botao {
+        text-align: center;
+    }
+
+    .secao {
+        padding: 30px 20px;
+    }
+
+    .titulo h2 {
+        font-size: 27px;
+    }
+
+    .foto-borda img {
+        height: 330px;
     }
 }
