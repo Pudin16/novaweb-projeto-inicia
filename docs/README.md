@@ -9,9 +9,9 @@ Este projeto tem como objetivo desenvolver uma loja virtual utilizando tecnologi
 ## Integrantes da Squad (Membros)
 
 - Isaque Benedetti Vieira
-- Nome do Integrante 2
-- Nome do Integrante 3
-- Nome do Integrante 4
+- Fernando Jose Silva Santos
+- Arthur Dias Miguel de Oliveira Couto
+- Anderson Silva Pierri jr
 
 ---
 
