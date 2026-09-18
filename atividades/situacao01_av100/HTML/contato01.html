@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato — TechPoint</title>
+    <meta name="description" content="Fale com a equipe TechPoint: dúvidas sobre produtos, pedidos e suporte técnico.">
+    <link rel="icon" href="img/logo/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="topo">
+
+    <header class="cabecalho-site">
+        <div class="container cabecalho-conteudo">
+            <a href="index.html" class="marca">
+                <img src="img/logo/logo.svg" alt="Logotipo TechPoint">
+                Tech<span>Point</span>
+            </a>
+
+            <input type="checkbox" id="menu-check" class="menu-check">
+
+            <nav class="nav-principal" id="nav-principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="contato.html" aria-current="page">Contato</a></li>
+                </ul>
+                <div class="nav-acoes">
+                    <a href="produtos.html" class="btn btn-primario btn-pequeno">Ver produtos</a>
+                </div>
+            </nav>
+
+            <label for="menu-check" class="menu-toggle" aria-label="Abrir menu de navegação">
+                <span></span><span></span><span></span>
+            </label>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero" style="padding-bottom: 20px;">
+            <div class="container">
+                <p class="rotulo">Fale com a gente</p>
+                <h1 style="font-size: clamp(2rem, 4vw, 2.8rem); margin: 12px 0 14px;">Contato</h1>
+                <p style="color: var(--cor-texto-suave); max-width: 560px;">
+                    Dúvidas sobre um produto, um pedido ou parcerias? Preencha o formulário
+                    abaixo que nossa equipe retorna o quanto antes.
+                </p>
+            </div>
+        </section>
+
+        <section class="secao" style="padding-top: 24px;">
+            <div class="container grade-contato">
+
+                <div class="form-card">
+                    <h2 style="font-size: 1.3rem; margin-bottom: 24px;">Envie sua mensagem</h2>
+
+                    <form id="form-contato" action="#enviado">
+                        <div class="linha-form">
+                            <div class="campo">
+                                <label for="nome">Nome completo</label>
+                                <input type="text" id="nome" name="nome" autocomplete="name" required>
+                            </div>
+                            <div class="campo">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" autocomplete="email" required>
+                            </div>
+                        </div>
+
+                        <div class="linha-form">
+                            <div class="campo">
+                                <label for="telefone">Telefone <span class="opcional">(opcional)</span></label>
+                                <input type="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="(11) 90000-0000">
+                            </div>
+                            <div class="campo">
+                                <label for="categoria">Categoria do produto</label>
+                                <select id="categoria" name="categoria" required>
+                                    <option value="" selected disabled>Selecione uma categoria</option>
+                                    <option value="mouse">Mouses</option>
+                                    <option value="teclado">Teclados</option>
+                                    <option value="headset">Headsets</option>
+                                    <option value="monitor">Monitores</option>
+                                    <option value="acessorio">Acessórios</option>
+                                    <option value="outro">Outro assunto</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <label for="assunto">Assunto</label>
+                            <input type="text" id="assunto" name="assunto" placeholder="Ex.: Dúvida sobre garantia do Echo Pro" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" placeholder="Conte com detalhes o que você precisa..." minlength="10" required></textarea>
+                            <small>Mínimo de 10 caracteres.</small>
+                        </div>
+
+                        <div class="campo campo-checkbox">
+                            <input type="checkbox" id="aceite" name="aceite" required>
+                            <label for="aceite">Li e concordo com o uso dos meus dados apenas para retorno deste contato.</label>
+                        </div>
+
+                        <div class="acoes-form">
+                            <button type="submit" class="btn btn-primario">Enviar mensagem</button>
+                            <button type="reset" class="btn btn-secundario">Limpar campos</button>
+                        </div>
+
+                        <p class="mensagem-envio" id="enviado" role="status">
+                            Mensagem pronta para revisão! Este formulário é apenas demonstrativo
+                            (projeto acadêmico) e não envia dados a um servidor real.
+                        </p>
+                    </form>
+                </div>
+
+                <aside class="info-contato">
+                    <div class="info-card">
+                        <h3>E-mail</h3>
+                        <p><a href="mailto:contato@techpoint.com.br">contato@techpoint.com.br</a></p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Telefone</h3>
+                        <p><a href="tel:+551140028922">(11) 4002-8922</a></p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Horário de atendimento</h3>
+                        <p>Segunda a sexta, das 9h às 18h</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Endereço</h3>
+                        <p>Av. Tecnologia, 1200 — São Paulo, SP</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape-site">
+        <div class="container">
+            <div class="rodape-grade">
+                <div>
+                    <a href="index.html" class="marca">
+                        <img src="img/logo/logo.svg" alt="Logotipo TechPoint">
+                        Tech<span>Point</span>
+                    </a>
+                    <p>Tecnologia, periféricos e acessórios para computadores e setups, com curadoria e suporte de verdade.</p>
+                </div>
+
+                <div>
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="index.html#sobre">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="mailto:contato@techpoint.com.br">contato@techpoint.com.br</a></li>
+                        <li><a href="tel:+551140028922">(11) 4002-8922</a></li>
+                        <li>São Paulo — SP</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Redes sociais</h4>
+                    <div class="redes-sociais">
+                        <a href="#" aria-label="TechPoint no Instagram">IG</a>
+                        <a href="#" aria-label="TechPoint no X (Twitter)">X</a>
+                        <a href="#" aria-label="TechPoint no YouTube">YT</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rodape-base">
+                <p>&copy; 2026 TechPoint. Todos os direitos reservados.</p>
+                <p>Projeto acadêmico — SENAI · Linguagem de Marcação</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#topo" class="botao-topo" aria-label="Voltar ao topo">↑</a>
+</body>
+</html>
