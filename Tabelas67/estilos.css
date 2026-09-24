@@ -3,6 +3,19 @@ header{
     color: white;
     padding: 5px;
 }
+header nav{
+    background-color: aliceblue;
+}
+header nav ul{
+    list-style: none;
+    position: relative;
+    height: 30px;
+    display: flex;
+}
+header nav ul li{
+    position: relative; 
+    width: 100px;
+}
 main{
     background-color: whitesmoke;
     padding: 5px;
