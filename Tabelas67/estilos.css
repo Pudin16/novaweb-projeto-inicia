@@ -1,0 +1,28 @@
+header{
+    background-color: palevioletred;
+    color: white;
+    padding: 5px;
+}
+main{
+    background-color: whitesmoke;
+    padding: 5px;
+}
+main table{
+    width: 400px;
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align: center;
+}
+main table th, main table td{
+    border: 1px solid;
+   
+}
+main table td img:hover{
+    width: 200px;
+}
+footer{
+    background-color: #000000;
+    color: aliceblue;
+    padding: 5px;
+    text-align: center;
+}
