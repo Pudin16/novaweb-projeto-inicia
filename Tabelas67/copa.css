@@ -1,365 +1,819 @@
+/* =========================================
+   RESET
+========================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html {
-    scroll-behavior: smooth;
+
+
+/* =========================================
+   VARIÁVEIS
+========================================= */
+
+:root {
+
+    --azul: #1a73e8;
+    --azul-escuro: #174ea6;
+    --azul-claro: #e8f0fe;
+
+    --fundo: #f8f9fa;
+    --branco: #ffffff;
+
+    --texto: #202124;
+    --cinza: #5f6368;
+    --cinza-claro: #f1f3f4;
+
+    --borda: #dadce0;
+
+    --verde: #188038;
+    --verde-fundo: #e6f4ea;
+
+    --vermelho: #d93025;
+    --vermelho-fundo: #fce8e6;
+
+    --amarelo: #f9ab00;
+    --amarelo-fundo: #fef7e0;
 }
+
+
+/* =========================================
+   BODY
+========================================= */
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f3f5f8;
-    color: #172033;
-    line-height: 1.5;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--fundo);
+
+    color: var(--texto);
+
+    min-height: 100vh;
 }
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
 .cabecalho {
-    width: 100%;
-    min-height: 75px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background: var(--branco);
 
-    padding: 0 7%;
-
-    background: #071d49;
-
-    color: white;
+    border-bottom: 1px solid var(--borda);
 
     position: sticky;
+
     top: 0;
 
-    z-index: 1000;
-
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 100;
 }
-.logo {
+
+
+.cabecalho-conteudo {
+
+    width: min(1250px, 94%);
+
+    margin: auto;
+
+    min-height: 78px;
+
     display: flex;
+
     align-items: center;
-    gap: 10px;
+
+    justify-content: space-between;
 }
-.logo span {
-    font-size: 28px;
-}
-.logo h1 {
-    font-size: 22px;
-    letter-spacing: 1px;
-}
-nav {
+
+
+.marca {
+
     display: flex;
-    gap: 30px;
+
+    align-items: center;
+
+    gap: 14px;
 }
-nav a {
-    color: white;
 
-    text-decoration: none;
 
-    font-size: 15px;
+.icone-bola {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: var(--azul-claro);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+.marca h1 {
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    margin-bottom: 3px;
+}
+
+
+.marca p {
+
+    font-size: 12px;
+
+    color: var(--cinza);
+}
+
+
+.ano {
+
+    font-size: 25px;
+
     font-weight: bold;
 
-    transition: 0.3s;
+    color: var(--azul);
 }
-nav a:hover {
-    color: #45d889;
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+
+    width: min(1250px, 94%);
+
+    margin: 32px auto 60px;
 }
-.hero {
-    min-height: 480px;
 
-    display: flex;
-    align-items: center;
 
-    padding: 70px 8%;
+/* =========================================
+   INTRODUÇÃO
+========================================= */
 
-    background:
-        linear-gradient(
-            120deg,
-            #061a42,
-            #0b4160
-        );
+.introducao {
 
-    color: white;
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 14px;
+
+    padding: 28px;
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 2px 5px rgba(60, 64, 67, 0.08);
 }
-.hero-conteudo {
-    max-width: 850px;
-}
-.subtitulo {
+
+
+.etiqueta {
+
     display: inline-block;
 
-    margin-bottom: 20px;
+    background: var(--azul-claro);
 
-    padding: 7px 15px;
+    color: var(--azul-escuro);
 
-    border-radius: 30px;
+    padding: 6px 9px;
 
-    background: #45d889;
+    border-radius: 5px;
 
-    color: #061a42;
-
-    font-size: 12px;
+    font-size: 10px;
 
     font-weight: bold;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
 }
-.hero h2 {
-    font-size: clamp(45px, 7vw, 80px);
 
-    line-height: 0.95;
 
-    margin-bottom: 25px;
+.introducao h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
 }
-.hero h2 span {
-    display: block;
 
-    color: #45d889;
+
+.introducao p {
+
+    color: var(--cinza);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    max-width: 800px;
 }
-.descricao {
-    max-width: 650px;
 
-    color: #dce5f2;
 
-    font-size: 18px;
-}
-.numeros {
+/* =========================================
+   LEGENDA
+========================================= */
+
+.legenda {
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 12px;
+
+    padding: 14px 18px;
+
+    margin-bottom: 18px;
+
     display: flex;
 
-    gap: 50px;
+    align-items: center;
 
-    margin-top: 40px;
+    gap: 20px;
+
+    flex-wrap: wrap;
 }
-.numeros div {
+
+
+.legenda-item {
+
     display: flex;
 
-    flex-direction: column;
-}
-.numeros strong {
-    font-size: 32px;
+    align-items: center;
 
-    color: #45d889;
-}
-.numeros span {
-    font-size: 13px;
-
-    color: #dce5f2;
-}
-.titulo {
-    margin-bottom: 35px;
-}
-.titulo p {
-    color: #168b56;
+    gap: 7px;
 
     font-size: 12px;
 
-    font-weight: bold;
-
-    letter-spacing: 2px;
+    color: var(--cinza);
 }
-.titulo h2 {
-    margin: 5px 0;
 
-    font-size: 38px;
 
-    color: #071d49;
+.legenda-explicacao {
+
+    margin-left: auto;
+
+    font-size: 12px;
+
+    color: var(--cinza);
 }
-.titulo span {
-    color: #697586;
 
-    font-size: 15px;
-}
-.classificacao {
-    width: 86%;
 
-    max-width: 1200px;
+/* =========================================
+   GRUPO
+========================================= */
 
-    margin: 80px auto;
-}
 .grupo {
-    margin-bottom: 30px;
 
-    background: white;
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
 
     border-radius: 14px;
 
     overflow: hidden;
 
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
-}
-.grupo h3 {
-    padding: 18px 25px;
+    margin-bottom: 18px;
 
-    background: #071d49;
+    box-shadow:
+        0 2px 5px rgba(60, 64, 67, 0.07);
 
-    color: white;
+    transition: 0.2s ease;
+}
 
-    font-size: 20px;
+
+.grupo:hover {
+
+    box-shadow:
+        0 5px 15px rgba(60, 64, 67, 0.12);
 }
-.destaque-brasil {
-    border: 2px solid #168b56;
+
+
+/* =========================================
+   CABEÇALHO DO GRUPO
+========================================= */
+
+.grupo-cabecalho {
+
+    padding: 15px 18px;
+
+    border-bottom: 1px solid var(--borda);
+
+    background: #ffffff;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
 }
-.destaque-brasil h3 {
-    background: #168b56;
+
+
+.grupo-cabecalho h2 {
+
+    font-size: 17px;
+
+    font-weight: 600;
 }
-.tabela {
+
+
+.grupo-cabecalho span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    color: var(--cinza);
+}
+
+
+/* =========================================
+   DESTAQUE DO BRASIL
+========================================= */
+
+.grupo-brasil {
+
+    border: 2px solid var(--azul);
+}
+
+
+.grupo-brasil .grupo-cabecalho {
+
+    background: var(--azul-claro);
+}
+
+
+.grupo-brasil .grupo-cabecalho h2 {
+
+    color: var(--azul-escuro);
+}
+
+
+tr.brasil {
+
+    background: #f5f9ff;
+}
+
+
+tr.brasil .time {
+
+    color: var(--azul-escuro);
+}
+
+
+/* =========================================
+   TABELA
+========================================= */
+
+.tabela-wrapper {
+
     width: 100%;
 
     overflow-x: auto;
 }
+
+
 table {
+
     width: 100%;
+
+    min-width: 900px;
 
     border-collapse: collapse;
 
-    min-width: 700px;
+    table-layout: auto;
 }
+
+
 thead {
-    background: #eef1f5;
+
+    background: #f8f9fa;
 }
+
+
 th {
-    padding: 14px 10px;
 
-    color: #5d6875;
+    height: 42px;
 
-    font-size: 11px;
+    padding: 8px 10px;
 
-    text-transform: uppercase;
+    border-bottom: 1px solid var(--borda);
+
+    color: var(--cinza);
+
+    font-size: 10px;
+
+    font-weight: 700;
 
     text-align: center;
 
     white-space: nowrap;
 }
-th:nth-child(2) {
-    text-align: left;
-}
-td {
-    padding: 16px 10px;
 
-    border-top: 1px solid #e7eaee;
+
+th.coluna-time {
+
+    text-align: left;
+
+    min-width: 210px;
+}
+
+
+td {
+
+    height: 52px;
+
+    padding: 8px 10px;
+
+    border-bottom: 1px solid #eeeeee;
 
     text-align: center;
 
-    font-size: 14px;
+    font-size: 13px;
+
+    white-space: nowrap;
 }
-td:nth-child(2) {
+
+
+tbody tr:last-child td {
+
+    border-bottom: none;
+}
+
+
+tbody tr {
+
+    transition: background 0.15s ease;
+}
+
+
+tbody tr:hover {
+
+    background: #f8faff;
+}
+
+
+/* =========================================
+   POSIÇÃO
+========================================= */
+
+.posicao {
+
+    color: var(--cinza);
+
+    font-weight: 600;
+
+    width: 35px;
+}
+
+
+/* =========================================
+   TIME
+========================================= */
+
+td.time {
+
     text-align: left;
 
-    font-weight: bold;
+    font-weight: 500;
 }
-tbody tr {
-    transition: 0.2s;
+
+
+.time img {
+
+    width: 28px;
+
+    height: 19px;
+
+    object-fit: cover;
+
+    vertical-align: middle;
+
+    margin-right: 9px;
+
+    border-radius: 2px;
+
+    border: 1px solid #dddddd;
+
+    background: #eeeeee;
 }
-tbody tr:hover {
-    background: #f5f8fa;
+
+
+/* =========================================
+   PONTOS
+========================================= */
+
+.pontos {
+
+    font-weight: 700;
+
+    font-size: 14px;
 }
-.classificado {
-    border-left: 4px solid #168b56;
+
+
+/* =========================================
+   SALDO
+========================================= */
+
+.saldo {
+
+    font-weight: 600;
 }
-.jogos {
-    width: 86%;
 
-    max-width: 1200px;
 
-    margin: 80px auto;
+.positivo {
+
+    color: var(--verde);
 }
-.tabela-jogos {
-    min-width: 850px;
 
-    background: white;
 
-    border-radius: 14px;
+.negativo {
 
-    overflow: hidden;
-
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+    color: var(--vermelho);
 }
-.tabela-jogos td {
-    padding: 18px 12px;
-}
-.tabela-jogos td:nth-child(4) {
-    font-size: 18px;
 
-    font-weight: bold;
 
-    color: #071d49;
-}
-footer {
+/* =========================================
+   CAMPANHA
+========================================= */
+
+.campanha {
+
     display: flex;
 
-    justify-content: space-between;
+    justify-content: center;
 
     align-items: center;
 
-    gap: 30px;
+    gap: 6px;
+}
 
-    padding: 40px 8%;
 
-    background: #04132f;
+.jogo {
+
+    width: 23px;
+
+    height: 23px;
+
+    border-radius: 50%;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    border: 1px solid transparent;
+}
+
+
+/* VITÓRIA */
+
+.jogo.v {
+
+    color: var(--verde);
+
+    background: var(--verde-fundo);
+
+    border-color: #b7dfc2;
+}
+
+
+/* EMPATE */
+
+.jogo.e {
+
+    color: #b06000;
+
+    background: var(--amarelo-fundo);
+
+    border-color: #f5d78e;
+}
+
+
+/* DERROTA */
+
+.jogo.d {
+
+    color: var(--vermelho);
+
+    background: var(--vermelho-fundo);
+
+    border-color: #f1b5b0;
+}
+
+
+/* =========================================
+   OBSERVAÇÃO
+========================================= */
+
+.observacao {
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 12px;
+
+    padding: 17px 20px;
+
+    margin-top: 25px;
+}
+
+
+.observacao strong {
+
+    font-size: 13px;
+
+    color: var(--texto);
+}
+
+
+.observacao p {
+
+    margin-top: 7px;
+
+    font-size: 11px;
+
+    color: var(--cinza);
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    background: #202124;
 
     color: white;
+
+    text-align: center;
+
+    padding: 25px 15px;
+
+    margin-top: 40px;
 }
-footer h3 {
-    margin-bottom: 5px;
-}
+
+
 footer p {
-    color: #aebbd0;
 
-    font-size: 14px;
-}
-@media (max-width: 800px) {
+    margin: 5px 0;
 
-    .cabecalho {
-        flex-direction: column;
+    font-size: 13px;
 
-        gap: 15px;
-
-        padding: 18px 5%;
-    }
-
-    nav {
-        gap: 15px;
-    }
-
-    .hero {
-        padding: 60px 7%;
-    }
-
-    .numeros {
-        gap: 25px;
-    }
-
-    .classificacao,
-    .jogos {
-        width: 92%;
-    }
-
-    footer {
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
-
+    color: #bdc1c6;
 }
 
 
-@media (max-width: 500px) {
+footer p:last-child {
 
-    .hero h2 {
-        font-size: 48px;
+    color: white;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   BARRA DE ROLAGEM DAS TABELAS
+========================================= */
+
+.tabela-wrapper::-webkit-scrollbar {
+
+    height: 7px;
+}
+
+
+.tabela-wrapper::-webkit-scrollbar-track {
+
+    background: #f1f3f4;
+}
+
+
+.tabela-wrapper::-webkit-scrollbar-thumb {
+
+    background: #bdc1c6;
+
+    border-radius: 10px;
+}
+
+
+.tabela-wrapper::-webkit-scrollbar-thumb:hover {
+
+    background: #9aa0a6;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .cabecalho-conteudo {
+
+        width: 94%;
+
+        min-height: 68px;
     }
 
-    .descricao {
-        font-size: 16px;
+
+    .marca h1 {
+
+        font-size: 18px;
     }
 
-    .numeros {
-        gap: 20px;
+
+    .marca p {
+
+        font-size: 10px;
     }
 
-    .numeros strong {
-        font-size: 26px;
+
+    .icone-bola {
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 20px;
     }
 
-    .titulo h2 {
-        font-size: 30px;
+
+    .ano {
+
+        font-size: 20px;
+    }
+
+
+    .container {
+
+        width: 96%;
+
+        margin-top: 20px;
+    }
+
+
+    .introducao {
+
+        padding: 21px;
+    }
+
+
+    .introducao h2 {
+
+        font-size: 23px;
+    }
+
+
+    .legenda {
+
+        gap: 12px;
+    }
+
+
+    .legenda-explicacao {
+
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    .grupo-cabecalho {
+
+        padding: 13px 15px;
+    }
+
+
+    table {
+
+        min-width: 900px;
     }
 
 }
