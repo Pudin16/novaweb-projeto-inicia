@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript não é Java</h1>
+        <pre>
+        <code>
+            class Pessoa {
+                constructor(nome, idade) {
+                    this.nome = nome;
+                    this.idade = idade;
+                }
+            }
+
+            saudacao(){
+                console.log(`Olá, meu nome é ${this.nome} e tenho ${this.idade} anos.`);
+            }
+        </code>
+        </pre>
+    </div><!-- container -->
+
+    <div class="container">
+        <h1>Java</h1>
+        <pre>
+        <code>
+            public class Pessoa {
+                public Pessoa(String nome, int idade) {
+                    this.nome = nome;
+                    this.idade = idade;
+                }
+            }
+
+            public void saudacao() {
+                System.out.println("Olá, meu nome é " + this.nome + " e tenho " + this.idade + " anos.");
+            }
+        </code>
+        </pre>
+    </div><!-- container -->
+</body>
+</html>
