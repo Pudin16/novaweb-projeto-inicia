@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário - Aula 14</title>
+    <link rel="stylesheet" href="formulario.css">
+    <script src="formulario.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Aula 14 - CSS para Formulários</h1>
+        <p>Exercício de habilitação e desabilitação de campos.</p>
+    </header>
+    <main class="container">
+        <form id="formulario">
+            <div class="campo">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome" disabled>
+                <button type="button" data-campo="nome">Habilitar</button>
+            </div>
+            <div class="campo">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="Digite seu e-mail" disabled>
+                <button type="button" data-campo="email">Habilitar</button>
+            </div>
+            <div class="campo">
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" placeholder="Digite sua idade" min="1" max="120" disabled>
+                <button type="button" data-campo="idade">Habilitar</button>
+            </div>
+            <div class="campo">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" placeholder="Digite sua cidade" disabled>
+                <button type="button" data-campo="cidade">Habilitar</button>
+            </div>
+            <p id="mensagem">Clique em Habilitar para editar um campo.</p>
+        </form>
+    </main>
+</body>
+</html>
