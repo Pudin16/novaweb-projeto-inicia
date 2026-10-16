@@ -13,6 +13,9 @@
     </header>
     <main>
         <from>
+            <div class="alert alert info" role="alert" id="mensagem" style="display: none;">
+                
+            </div>
             <div>
                 <img src="controle.png" alt="Foto de perfil" whidth="200" height="200" 
                 onmouseover="console.log('mouse sobre a imagem')">
@@ -27,6 +30,11 @@
                 <input type="date" id="nascimento" name="nascimento" class="form-control"
                     value="1900-01-01">
             </div>
+             <div>
+                <label for="CPF" class="form-label">CPF:</label>
+                <input type="text" id="CPF" name="CPF" class="form-control"
+                    value="123.456.789-10" onblur="validaCPF()">
+            </div>
             <div class="form-group">
                 <button type="button" class="btn btn-primary" onclick="mensagem()">
                     <span class="glyphicon glyphicon-save"></span> Salvar
@@ -36,7 +44,23 @@
     </main>
     <script type="text/javascript">
         function mensagem() {
-            alert("Perfil salvo com sucesso!");
+            const msg = document.querySelector("#mensagem");
+            msg.style.display = "block";
+            msg.textContent = "Dados salvos com sucesso!";
+        }
+        function validaCPF() {
+            const cpf = document.querySelector("#CPF").value;
+            // Aqui você pode adicionar a lógica de validação do CPF
+            console.log(cpf);
+            if (cpf.length !== 11) {
+                const msg = document.querySelector("#CPF");
+                msg.style.display = "block";
+                msg.textContent = "CPF invalido. digite 11 digitos";
+            } else {
+                const msg = document.querySelector("#CPF");
+                msg.style.display = "block";
+                msg.textContent = "CPF válido!";
+            }
         }
     </script>
 </body>
