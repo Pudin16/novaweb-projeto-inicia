@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Projeto</title>
+    <link rel="stylesheet" href="perfil.css">
+    <script src="perfil.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <form id="formPerfil">
+            <h1>Perfil do Projeto</h1>
+            <p class="subtitulo">Preencha suas informações</p>
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome"
+                placeholder="Digite seu nome" required minlength="3">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email"
+                placeholder="Digite seu e-mail" required>
+            <label for="funcao">Função no projeto</label>
+            <select id="funcao" name="funcao" required>
+                <option value="">Selecione sua função</option>
+                <option value="Programação">Programação</option>
+                <option value="Design">Design</option>
+                <option value="Pesquisa">Pesquisa</option>
+                <option value="Organização">Organização</option>
+            </select>
+            <fieldset>
+                <legend>Nível de experiência</legend>
+                <label class="opcao">
+                    <input type="radio" name="nivel" value="Iniciante" required>
+                    Iniciante
+                </label>
+                <label class="opcao">
+                    <input type="radio" name="nivel" value="Intermediário">
+                    Intermediário
+                </label>
+                <label class="opcao">
+                    <input type="radio" name="nivel" value="Avançado">
+                    Avançado
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Áreas de interesse</legend>
+                <label class="opcao">
+                    <input type="checkbox" name="interesse" value="Tecnologia">
+                    Tecnologia
+                </label>
+                <label class="opcao">
+                    <input type="checkbox" name="interesse" value="Design">
+                    Design
+                </label>
+                <label class="opcao">
+                    <input type="checkbox" name="interesse" value="Programação">
+                    Programação
+                </label>
+            </fieldset>
+            <label for="sobre">Sobre você</label>
+            <textarea id="sobre" name="sobre" rows="4"
+                placeholder="Conte um pouco sobre você"
+                minlength="10" maxlength="300" required></textarea>
+            <small id="contador">0/300 caracteres</small>
+            <button type="submit">Salvar perfil</button>
+            <button type="reset" class="limpar">Limpar</button>
+            <p id="mensagem" role="status"></p>
+        </form>
+    </main>
+</body>
+</html>
