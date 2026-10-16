@@ -7,7 +7,6 @@ const msg = document.getElementById("mensagem");
 sb.addEventListener("input", function() {
     ct.textContent = sb.value.length + "/300 caracteres";
 });
-
 fm.addEventListener("submit", function(event) {
     event.preventDefault();
     const nm = document.getElementById("nome").value.trim();
