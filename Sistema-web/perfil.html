@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu perfil | Nexus</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body data-page="perfil">
+
+    <div class="app-shell">
+
+        <aside class="sidebar">
+
+            <a class="brand" href="consulta.html">
+                <span class="brand-mark">N</span>
+                <span>Nexus</span>
+            </a>
+
+            <div class="sidebar-label">MENU PRINCIPAL</div>
+
+            <nav class="side-nav">
+                <a href="consulta.html">
+                    <span class="nav-icon">▦</span>
+                    Consulta de usuários
+                </a>
+
+                <a href="perfil.html" class="active">
+                    <span class="nav-icon">◉</span>
+                    Meu perfil
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="mini-user">
+                    <div class="avatar avatar-small" data-avatar>AD</div>
+
+                    <div>
+                        <strong data-user-name>Administrador</strong>
+                        <span data-user-role>Administrador</span>
+                    </div>
+                </div>
+
+                <button class="nav-logout" type="button" data-logout>
+                    ↪ Sair da conta
+                </button>
+
+            </div>
+
+        </aside>
+
+        <main class="main-area">
+
+            <header class="topbar">
+                <div>
+                    <span class="eyebrow">CONTA</span>
+                    <h1>Meu perfil</h1>
+                </div>
+
+                <a class="topbar-user" href="perfil.html">
+                    <div class="avatar avatar-small" data-avatar>AD</div>
+                    <span data-user-name>Administrador</span>
+                </a>
+            </header>
+
+            <section class="content-wrap">
+
+                <div class="page-intro">
+                    <div>
+                        <h2>Informações pessoais</h2>
+                        <p class="muted">
+                            Consulte e atualize os dados da sua conta.
+                        </p>
+                    </div>
+
+                    <span class="badge badge-green">● Conta ativa</span>
+                </div>
+
+                <div class="profile-grid">
+
+                    <section class="card profile-summary">
+
+                        <div class="avatar avatar-large" data-avatar>AD</div>
+
+                        <h2 data-user-name>Administrador</h2>
+                        <p class="muted" data-user-email>admin@demo.com</p>
+
+                        <span class="badge badge-purple" data-user-role>
+                            Administrador
+                        </span>
+
+                        <div class="profile-divider"></div>
+
+                        <div class="summary-line">
+                            <span>Tipo de conta</span>
+                            <strong>Administrador</strong>
+                        </div>
+
+                        <div class="summary-line">
+                            <span>Status</span>
+                            <strong class="text-green">Ativo</strong>
+                        </div>
+
+                    </section>
+
+                    <section class="card">
+
+                        <div class="card-heading">
+                            <div>
+                                <h2>Editar perfil</h2>
+                                <p class="muted">
+                                    Mantenha seus dados atualizados.
+                                </p>
+                            </div>
+                        </div>
+
+                        <form id="profile-form" class="form-grid">
+
+                            <div class="field">
+                                <label for="profile-name">Nome completo</label>
+                                <input id="profile-name" name="name" required maxlength="80">
+                            </div>
+
+                            <div class="field">
+                                <label for="profile-email">E-mail</label>
+                                <input id="profile-email" name="email" type="email" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="profile-role">Cargo</label>
+                                <input id="profile-role" name="role" maxlength="60">
+                            </div>
+
+                            <div class="field">
+                                <label for="profile-phone">Telefone</label>
+                                <input id="profile-phone" name="phone" type="tel"
+                                       placeholder="(11) 99999-9999">
+                            </div>
+
+                            <div class="field field-full">
+                                <label for="profile-about">Sobre mim</label>
+                                <textarea id="profile-about" name="about" rows="4"
+                                          maxlength="300"
+                                          placeholder="Conte um pouco sobre você..."></textarea>
+                            </div>
+
+                            <div class="field-full form-actions">
+                                <button class="btn btn-primary" type="submit">
+                                    Salvar alterações
+                                </button>
+
+                                <button class="btn btn-secondary" type="reset" id="profile-reset">
+                                    Cancelar
+                                </button>
+                            </div>
+
+                            <p id="profile-message" class="form-message field-full"
+                               role="status"></p>
+
+                        </form>
+
+                    </section>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <div id="toast" class="toast" role="status"></div>
+
+</body>
+</html>

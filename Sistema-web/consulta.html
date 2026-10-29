@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários | Nexus</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body data-page="consulta">
+
+    <div class="app-shell">
+
+        <aside class="sidebar">
+
+            <a class="brand" href="consulta.html">
+                <span class="brand-mark">N</span>
+                <span>Nexus</span>
+            </a>
+
+            <div class="sidebar-label">MENU PRINCIPAL</div>
+
+            <nav class="side-nav">
+                <a href="consulta.html" class="active">
+                    <span class="nav-icon">▦</span>
+                    Consulta de usuários
+                </a>
+
+                <a href="perfil.html">
+                    <span class="nav-icon">◉</span>
+                    Meu perfil
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="mini-user">
+                    <div class="avatar avatar-small" data-avatar>AD</div>
+
+                    <div>
+                        <strong data-user-name>Administrador</strong>
+                        <span data-user-role>Administrador</span>
+                    </div>
+                </div>
+
+                <button class="nav-logout" type="button" data-logout>
+                    ↪ Sair da conta
+                </button>
+
+            </div>
+
+        </aside>
+
+        <main class="main-area">
+
+            <header class="topbar">
+                <div>
+                    <span class="eyebrow">GERENCIAMENTO</span>
+                    <h1>Usuários</h1>
+                </div>
+
+                <a class="topbar-user" href="perfil.html">
+                    <div class="avatar avatar-small" data-avatar>AD</div>
+                    <span data-user-name>Administrador</span>
+                </a>
+            </header>
+
+            <section class="content-wrap">
+
+                <div class="page-intro">
+                    <div>
+                        <h2>Consulta de usuários</h2>
+                        <p class="muted">
+                            Visualize, pesquise e gerencie os usuários cadastrados.
+                        </p>
+                    </div>
+
+                    <button id="add-user-button" class="btn btn-primary" type="button">
+                        ＋ Novo usuário
+                    </button>
+                </div>
+
+                <div class="stats-grid">
+
+                    <article class="stat-card">
+                        <div class="stat-icon stat-icon-purple">♙</div>
+                        <div>
+                            <span>Total de usuários</span>
+                            <strong id="total-users">0</strong>
+                            <small>Registros cadastrados</small>
+                        </div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-icon stat-icon-green">✓</div>
+                        <div>
+                            <span>Usuários ativos</span>
+                            <strong id="active-users">0</strong>
+                            <small>Com status ativo</small>
+                        </div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-icon stat-icon-orange">◷</div>
+                        <div>
+                            <span>Usuários inativos</span>
+                            <strong id="inactive-users">0</strong>
+                            <small>Com status inativo</small>
+                        </div>
+                    </article>
+
+                </div>
+
+                <section class="card table-card">
+
+                    <div class="card-heading table-heading">
+                        <div>
+                            <h2>Lista de usuários</h2>
+                            <p class="muted">
+                                Pesquise por nome, e-mail, cargo ou status.
+                            </p>
+                        </div>
+
+                        <span class="table-count" id="results-count">0 registros</span>
+                    </div>
+
+                    <div class="toolbar">
+
+                        <div class="search-box">
+                            <span aria-hidden="true">⌕</span>
+                            <input
+                                id="user-search"
+                                type="search"
+                                placeholder="Buscar usuário..."
+                                aria-label="Pesquisar usuários"
+                            >
+                        </div>
+
+                        <label class="filter-label" for="status-filter">
+                            Status
+                        </label>
+
+                        <select id="status-filter">
+                            <option value="todos">Todos</option>
+                            <option value="Ativo">Ativo</option>
+                            <option value="Inativo">Inativo</option>
+                        </select>
+
+                    </div>
+
+                    <div class="table-responsive">
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>USUÁRIO</th>
+                                    <th>CARGO</th>
+                                    <th>STATUS</th>
+                                    <th>CADASTRO</th>
+                                    <th>AÇÕES</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="users-table-body"></tbody>
+                        </table>
+
+                    </div>
+
+                    <div id="empty-state" class="empty-state hidden">
+                        <div class="empty-icon">⌕</div>
+                        <h3>Nenhum usuário encontrado</h3>
+                        <p>Tente alterar a pesquisa ou o filtro de status.</p>
+
+                        <button class="btn btn-secondary" id="clear-filters" type="button">
+                            Limpar filtros
+                        </button>
+                    </div>
+
+                    <div class="table-footer">
+                        <span id="table-summary">Mostrando 0 registros</span>
+                        <span>Dados demonstrativos</span>
+                    </div>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- Janela de cadastro e edição -->
+    <div id="user-modal" class="modal hidden" role="dialog"
+         aria-modal="true" aria-labelledby="modal-title">
+
+        <div class="modal-backdrop" data-close-modal></div>
+
+        <section class="modal-card">
+
+            <div class="modal-header">
+                <div>
+                    <span class="eyebrow">CADASTRO</span>
+                    <h2 id="modal-title">Novo usuário</h2>
+                </div>
+
+                <button class="icon-button" type="button"
+                        data-close-modal aria-label="Fechar">
+                    ×
+                </button>
+            </div>
+
+            <form id="user-form" class="form-grid">
+
+                <input type="hidden" id="user-id">
+
+                <div class="field field-full">
+                    <label for="user-name">Nome completo *</label>
+                    <input id="user-name" required maxlength="80"
+                           placeholder="Ex.: Camila Oliveira">
+                </div>
+
+                <div class="field">
+                    <label for="user-email">E-mail *</label>
+                    <input id="user-email" type="email" required
+                           placeholder="nome@empresa.com">
+                </div>
+
+                <div class="field">
+                    <label for="user-role">Cargo *</label>
+                    <input id="user-role" required maxlength="60"
+                           placeholder="Ex.: Analista">
+                </div>
+
+                <div class="field">
+                    <label for="user-status">Status</label>
+                    <select id="user-status">
+                        <option>Ativo</option>
+                        <option>Inativo</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="user-date">Data de cadastro</label>
+                    <input id="user-date" type="date" required>
+                </div>
+
+                <p id="user-form-message" class="form-message field-full"
+                   role="alert"></p>
+
+                <div class="field-full form-actions">
+                    <button class="btn btn-primary" type="submit">
+                        Salvar usuário
+                    </button>
+
+                    <button class="btn btn-secondary" type="button" data-close-modal>
+                        Cancelar
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
