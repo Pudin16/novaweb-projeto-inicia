@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Nexus</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body class="login-page" data-page="login">
+
+    <main class="login-layout">
+
+        <section class="login-visual">
+            <a class="brand brand-light" href="index.html">
+                <span class="brand-mark">F</span>
+                <span>Nexus</span>
+            </a>
+
+            <div class="visual-copy">
+                <span class="eyebrow">GESTÃO SIMPLES, RESULTADOS MELHORES</span>
+                <h1>Organize sua equipe.<br>
+                    <span>Conecte possibilidades.</span>
+                </h1>
+                <p>Uma maneira simples e prática de manter as informações da sua equipe em um só lugar.</p>
+            </div>
+
+            <div class="visual-foot">
+                <span class="status-dot"></span>
+                Seu espaço de trabalho, em um só lugar
+            </div>
+        </section>
+
+        <section class="login-panel">
+            <div class="login-card">
+
+                <div class="mobile-brand brand">
+                    <span class="brand-mark">N</span>
+                    <span>Nexus</span>
+                </div>
+
+                <span class="eyebrow">BEM-VINDO DE VOLTA</span>
+                <h2>Acesse sua conta</h2>
+                <p class="muted">Informe seus dados para continuar.</p>
+
+                <form id="login-form" class="form-stack">
+
+                    <label for="login-email">E-mail</label>
+                    <input
+                        id="login-email"
+                        type="email"
+                        placeholder="voce@empresa.com"
+                        autocomplete="username"
+                        required
+                    >
+
+                    <label for="login-password">Senha</label>
+
+                    <div class="password-wrap">
+                        <input
+                            id="login-password"
+                            type="password"
+                            placeholder="Digite sua senha"
+                            autocomplete="current-password"
+                            required
+                            minlength="6"
+                        >
+                        <button
+                            class="password-toggle"
+                            type="button"
+                            id="toggle-password"
+                        >Mostrar</button>
+                    </div>
+
+                    <div class="form-row between">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="remember-me">
+                            Lembrar de mim
+                        </label>
+                        <span class="small-note">Conta demonstrativa</span>
+                    </div>
+
+                    <button class="btn btn-primary btn-full" type="submit">
+                        Entrar <span>→</span>
+                    </button>
+
+                    <p id="login-message" class="form-message" role="status"></p>
+                </form>
+
+                <div class="demo-box">
+                    <strong>Dados para testar</strong>
+                    <span>E-mail: admin@demo.com</span>
+                    <span>Senha: 123456</span>
+                </div>
+
+                <p class="legal-note">
+                    Projeto acadêmico demonstrativo.
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
