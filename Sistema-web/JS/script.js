@@ -1,10 +1,5 @@
 (() => {
     "use strict";
-
-    // =====================================
-    // CONFIGURAÇÕES E ARMAZENAMENTO
-    // =====================================
-
     const KEYS = {
         users: "nexus_users_v1",
         current: "nexus_current_user_v1",
