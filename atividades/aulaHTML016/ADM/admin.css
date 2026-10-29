@@ -1,0 +1,129 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f4f9;
+    color: #222;
+}
+
+header {
+    background-color: #172554;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header p {
+    margin-top: 8px;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 25px;
+}
+
+.formulario,
+.tabela {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #00000015;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #172554;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 11px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 2px solid #3b82f6;
+    border-color: #3b82f6;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+#limpar {
+    background-color: #64748b;
+}
+
+#mensagem {
+    margin-top: 15px;
+    color: #166534;
+}
+
+.tabela p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #dbeafe;
+}
+
+tbody tr {
+    cursor: pointer;
+}
+
+tbody tr:hover {
+    background-color: #eff6ff;
+}
+
+tbody tr.selecionado {
+    background-color: #bfdbfe;
+}
+
+@media (max-width: 800px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .tabela {
+        overflow-x: auto;
+    }
+}
